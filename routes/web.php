@@ -17,8 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('post', function () {
+Route::get('post/', function () {
 
     $collection = Post::findorfail(2);
-   ddd($collection);
+    ddd($collection);
 });
+Route::get('posts/{post}', fn($id) => view('post', [ 'post' => Post::findorfail($id)]));
