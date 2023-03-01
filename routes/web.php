@@ -22,4 +22,4 @@ Route::get('post/', function () {
     $collection = Post::findorfail(2);
     ddd($collection);
 });
-Route::get('posts/{post}', fn($id) => view('post', [ 'post' => Post::findorfail($id)]));
+Route::get('posts/{post:slug}',fn(Post $post) =>dd (view('post', [ 'post' => $post])));
