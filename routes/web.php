@@ -14,12 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('post/', function () {
+Route::get('/', fn() => view('posts',['posts'=>Post::all()]));
 
-    $collection = Post::findorfail(1);
-    ddd($collection);
-});
 Route::get('posts/{post:slug}',fn(Post $post) => view('post', [ 'post' => $post]));

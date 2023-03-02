@@ -8,16 +8,16 @@
     <title>Blog</title>
 </head>
 <body>
-
+@foreach($posts as $post)
     <article>
-        <h1>
-            <a href="posts/{{$post->slug}}">
-                {{$post->title}}
-            </a>
-        </h1>
-        <div><p>{{$post->body}}</p></div>
-
+    <h1>
+        <a href="posts/{{$post->slug}}">
+            {{$post->title}}
+        </a>
+    </h1>
+    <div>{{$post->excerpt}}</div>
+@endforeach
     </article>
 
-    </body>
-    </html>
+</body>
+</html>
