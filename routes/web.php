@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 Route::get('post/', function () {
 
-    $collection = Post::findorfail(2);
+    $collection = Post::findorfail(1);
     ddd($collection);
 });
-Route::get('posts/{post:slug}',fn(Post $post) =>dd (view('post', [ 'post' => $post])));
+Route::get('posts/{post:slug}',fn(Post $post) => view('post', [ 'post' => $post]));
