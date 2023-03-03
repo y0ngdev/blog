@@ -10,7 +10,7 @@
 <body>
 @foreach($posts as $post)
     <article>
-    <h1>
+    <h1>m,em,e;lek
         <a href="posts/{{$post->slug}}">
             {{$post->title}}
         </a>
