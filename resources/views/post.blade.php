@@ -20,6 +20,6 @@
         <div><p>{{$post->body}}</p></div>
 
     </article>
-service
+
     </body>
     </html>
