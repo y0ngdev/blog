@@ -8,14 +8,14 @@
     <title>Blog</title>
 </head>
 <body>
-@foreach($posts as $post)
     <article>
+@foreach($posts as $post)
     <h1>
         <a href="posts/{{$post->slug}}">
             {{$post->title}}
         </a>
     </h1>
-        <p>by prosper yong in <a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a></p>
+        <p>by <a href="#">Prosper Yong</a> in <a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a></p>
     <div>{{$post->excerpt}}</div>
 @endforeach
     </article>
