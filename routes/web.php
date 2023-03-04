@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn() => view('posts', ['posts' => Post::latest('published_at')->with('category')->get()]));
+Route::get('/', fn() => view('posts', ['posts' => Post::latest('published_at')->with('category','author')->get()]));
 
 Route::get('posts/{post:slug}', fn(Post $post) => view('post', ['post' => $post]));
 
