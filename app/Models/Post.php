@@ -15,9 +15,9 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class);
     }
-    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function author(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id');
     }
 
 }
