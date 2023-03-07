@@ -165,12 +165,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
-
-                    <!-- sidebar -->
-               <x-sidebar/>
-                </div>
-
+                <x-sidebar/>
             </div>
 
         </div>
