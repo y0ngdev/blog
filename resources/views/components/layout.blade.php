@@ -35,7 +35,7 @@
                 <div class="row d-flex align-items-center gy-4">
                     <!-- copyright text -->
                     <div class="col-md-4">
-                        <span class="copyright">©{{Carbon\Carbon::$year}} My Blog.</span>
+                        <span class="copyright">© My Blog.</span>
                     </div>
 
                     <!-- social icons -->
