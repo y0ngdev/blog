@@ -7,7 +7,7 @@
         <div class="widget rounded">
             <div class="widget-header text-center">
                 <h3 class="widget-title">Popular Posts</h3>
-                <img src="images/wave.svg" class="wave" alt="wave"/>
+                <img src="/build/assets/images/wave.svg" class="wave" alt="wave"/>
             </div>
             <div class="widget-content">
                 <!-- post -->
@@ -16,7 +16,7 @@
                         <span class="number">1</span>
                         <a href="blog-single.html">
                             <div class="inner">
-                                <img src="images/posts/tabs-1.jpg" alt="post-title"/>
+                                <img src="/build/assets/images/posts/tabs-1.jpg" alt="post-title"/>
                             </div>
                         </a>
                     </div>
@@ -34,7 +34,7 @@
                         <span class="number">2</span>
                         <a href="blog-single.html">
                             <div class="inner">
-                                <img src="images/posts/tabs-2.jpg" alt="post-title"/>
+                                <img src="/build/assets/images/posts/tabs-2.jpg" alt="post-title"/>
                             </div>
                         </a>
                     </div>
@@ -52,7 +52,7 @@
                         <span class="number">3</span>
                         <a href="blog-single.html">
                             <div class="inner">
-                                <img src="images/posts/tabs-3.jpg" alt="post-title"/>
+                                <img src="/build/assets/images/posts/tabs-3.jpg" alt="post-title"/>
                             </div>
                         </a>
                     </div>
@@ -71,7 +71,7 @@
         <div class="widget rounded">
             <div class="widget-header text-center">
                 <h3 class="widget-title">Explore Topics</h3>
-                <img src="images/wave.svg" class="wave" alt="wave"/>
+                <img src="/build/assets/images/wave.svg" class="wave" alt="wave"/>
             </div>
             <div class="widget-content">
                 <ul class="list">
@@ -90,7 +90,7 @@
         <div class="widget rounded">
             <div class="widget-header text-center">
                 <h3 class="widget-title">Newsletter</h3>
-                <img src="images/wave.svg" class="wave" alt="wave"/>
+                <img src="/build/assets/images/wave.svg" class="wave" alt="wave"/>
             </div>
             <div class="widget-content">
                 <span class="newsletter-headline text-center mb-3">Join 70,000 subscribers!</span>
@@ -111,7 +111,7 @@
         <div class="widget rounded">
             <div class="widget-header text-center">
                 <h3 class="widget-title">Tag Clouds</h3>
-                <img src="images/wave.svg" class="wave" alt="wave"/>
+                <img src="/build/assets/images/wave.svg" class="wave" alt="wave"/>
             </div>
             <div class="widget-content">
                 <a href="#" class="tag">#Trending</a>
