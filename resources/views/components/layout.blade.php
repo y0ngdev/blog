@@ -38,17 +38,7 @@
                         <span class="copyright">© My Blog.</span>
                     </div>
 
-                    <!-- social icons -->
-                    <div class="col-md-4 text-center">
-                        <ul class="social-icons list-unstyled list-inline mb-0">
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        </ul>
-                    </div>
+                    <div class="col-md-4 text-center"></div>
 
                     <!-- go to top button -->
                     <div class="col-md-4">
