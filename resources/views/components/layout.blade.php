@@ -2,32 +2,22 @@
 <html lang="en-US">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>My Blog</title>
+    <title>Katen - Minimal Blog & Magazine HTML Theme</title>
     <meta name="description" content="Katen - Minimal Blog & Magazine HTML Theme">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-{{--    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">--}}
+    <link rel="shortcut icon" type="image/x-icon" href="build/assets/images/favicon.png">
 
     <!-- STYLES -->
-    @vite([
-        'resources/css/slick.css',
-    'resources/css/all.min.css',
-    'resources/css/simple-line-icons.css',
-    'resources/css/app.css',
-     ])
+    <link rel="stylesheet" href="build/assets/css/bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="build/assets/css/all.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="build/assets/css/slick.css" type="text/css" media="all">
+    <link rel="stylesheet" href="build/assets/css/simple-line-icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="build/assets/css/style.css" type="text/css" media="all">
 
-    @vite([
- 'resources/js/jquery.min.js',
- 'resources/js/popper.min.js',
- 'resources/js/slick.min.js',
- 'resources/js/jquery.sticky-sidebar.min.js',
- 'resources/js/bootstrap.min.js',
- 'resources/js/app.js',
- ])
 
 </head>
 
 <body>
-
 
 <!-- site wrapper -->
 <div class="site-wrapper">
@@ -44,7 +34,7 @@
 
                     <div class="col-md-4 col-xs-12">
                         <!-- site logo -->
-                        <a class="navbar-brand" href="classic.html"><img src="images/logo.svg" alt="logo" /></a>
+                        <a class="navbar-brand" href="classic.html"><img src="build/assets/images/logo.svg" alt="logo" /></a>
                     </div>
 
                     <div class="col-md-8 d-none d-md-block">
@@ -109,9 +99,7 @@
                             <button class="search icon-button">
                                 <i class="icon-magnifier"></i>
                             </button>
-                            <button class="burger-menu icon-button ms-2 float-end float-lg-none">
-                                <span class="burger-icon"></span>
-                            </button>
+
                         </div>
                     </div>
                 </div>
@@ -177,13 +165,13 @@
 							</span>
                             <a href="blog-single.html">
                                 <div class="inner">
-                                    <img src="images/posts/post-lg-1.jpg" alt="post-title" />
+                                    <img src="build/assets/images/posts/post-lg-1.jpg" alt="post-title" />
                                 </div>
                             </a>
                         </div>
                         <div class="details">
                             <ul class="meta list-inline mb-0">
-                                <li class="list-inline-item"><a href="#"><img src="images/other/author-sm.png" class="author" alt="author"/>Katen Doe</a></li>
+                                <li class="list-inline-item"><a href="#"><img src="build/assets/images/other/author-sm.png" class="author" alt="author"/>Katen Doe</a></li>
                                 <li class="list-inline-item">29 March 2021</li>
                                 <li class="list-inline-item"><i class="icon-bubble"></i> (0)</li>
                             </ul>
@@ -651,58 +639,14 @@
     </div>
 </div>
 
-<!-- canvas menu -->
-<div class="canvas-menu d-flex align-items-end flex-column">
-    <!-- close button -->
-    <button type="button" class="btn-close" aria-label="Close"></button>
-
-    <!-- logo -->
-    <div class="logo">
-        <img src="images/logo.svg" alt="Katen" />
-    </div>
-
-    <!-- menu -->
-    <nav>
-        <ul class="vertical-menu">
-            <li class="active">
-                <a href="index.html">Home</a>
-                <ul class="submenu">
-                    <li><a href="index.html">Magazine</a></li>
-                    <li><a href="personal.html">Personal</a></li>
-                    <li><a href="personal-alt.html">Personal Alt</a></li>
-                    <li><a href="minimal.html">Minimal</a></li>
-                    <li><a href="classic.html">Classic</a></li>
-                </ul>
-            </li>
-            <li><a href="category.html">Lifestyle</a></li>
-            <li><a href="category.html">Inspiration</a></li>
-            <li>
-                <a href="#">Pages</a>
-                <ul class="submenu">
-                    <li><a href="category.html">Category</a></li>
-                    <li><a href="blog-single.html">Blog Single</a></li>
-                    <li><a href="blog-single-alt.html">Blog Single Alt</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- social icons -->
-    <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
-        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-        <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
-        <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
-    </ul>
-</div>
 
 <!-- JAVA SCRIPTS -->
+<script src="build/assets/js/jquery.min.js"></script>
+<script src="build/assets/js/popper.min.js"></script>
+<script src="build/assets/js/bootstrap.min.js"></script>
+<script src="build/assets/js/slick.min.js"></script>
 
+<script src="build/assets/js/custom.js"></script>
 
 </body>
 </html>
