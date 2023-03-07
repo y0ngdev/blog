@@ -1,16 +1,15 @@
-
 <x-layout>
+    @if($posts->count())
 
-<x-post-featured-card :post="$posts[0]" />
+
+    <x-post-featured-card :post="$posts"/>
     <section class="main-content">
         <div class="container-xl">
-
             <div class="row gy-4">
-
                 <div class="col-lg-8">
-
-
-               <x-post-card/>
+                    @foreach($posts->skip(1) as $post)
+                    <x-post-card :post="$post"/>
+                    @endforeach
                     <nav>
                         <ul class="pagination justify-content-center">
                             <li class="page-item active" aria-current="page">
@@ -20,7 +19,6 @@
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                         </ul>
                     </nav>
-
                 </div>
                 <div class="col-lg-4">
 
@@ -31,7 +29,7 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title">Popular Posts</h3>
-                                <img src="images/wave.svg" class="wave" alt="wave" />
+                                <img src="images/wave.svg" class="wave" alt="wave"/>
                             </div>
                             <div class="widget-content">
                                 <!-- post -->
@@ -40,12 +38,13 @@
                                         <span class="number">1</span>
                                         <a href="blog-single.html">
                                             <div class="inner">
-                                                <img src="images/posts/tabs-1.jpg" alt="post-title" />
+                                                <img src="images/posts/tabs-1.jpg" alt="post-title"/>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="details clearfix">
-                                        <h6 class="post-title my-0"><a href="blog-single.html">3 Easy Ways To Make Your iPhone Faster</a></h6>
+                                        <h6 class="post-title my-0"><a href="blog-single.html">3 Easy Ways To Make Your
+                                                iPhone Faster</a></h6>
                                         <ul class="meta list-inline mt-1 mb-0">
                                             <li class="list-inline-item">29 March 2021</li>
                                         </ul>
@@ -57,12 +56,13 @@
                                         <span class="number">2</span>
                                         <a href="blog-single.html">
                                             <div class="inner">
-                                                <img src="images/posts/tabs-2.jpg" alt="post-title" />
+                                                <img src="images/posts/tabs-2.jpg" alt="post-title"/>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="details clearfix">
-                                        <h6 class="post-title my-0"><a href="blog-single.html">An Incredibly Easy Method That Works For All</a></h6>
+                                        <h6 class="post-title my-0"><a href="blog-single.html">An Incredibly Easy Method
+                                                That Works For All</a></h6>
                                         <ul class="meta list-inline mt-1 mb-0">
                                             <li class="list-inline-item">29 March 2021</li>
                                         </ul>
@@ -74,12 +74,13 @@
                                         <span class="number">3</span>
                                         <a href="blog-single.html">
                                             <div class="inner">
-                                                <img src="images/posts/tabs-3.jpg" alt="post-title" />
+                                                <img src="images/posts/tabs-3.jpg" alt="post-title"/>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="details clearfix">
-                                        <h6 class="post-title my-0"><a href="blog-single.html">10 Ways To Immediately Start Selling Furniture</a></h6>
+                                        <h6 class="post-title my-0"><a href="blog-single.html">10 Ways To Immediately
+                                                Start Selling Furniture</a></h6>
                                         <ul class="meta list-inline mt-1 mb-0">
                                             <li class="list-inline-item">29 March 2021</li>
                                         </ul>
@@ -92,7 +93,7 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title">Explore Topics</h3>
-                                <img src="images/wave.svg" class="wave" alt="wave" />
+                                <img src="images/wave.svg" class="wave" alt="wave"/>
                             </div>
                             <div class="widget-content">
                                 <ul class="list">
@@ -111,28 +112,28 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title">Newsletter</h3>
-                                <img src="images/wave.svg" class="wave" alt="wave" />
+                                <img src="images/wave.svg" class="wave" alt="wave"/>
                             </div>
                             <div class="widget-content">
                                 <span class="newsletter-headline text-center mb-3">Join 70,000 subscribers!</span>
                                 <form>
                                     <div class="mb-2">
-                                        <input class="form-control w-100 text-center" placeholder="Email address…" type="email">
+                                        <input class="form-control w-100 text-center" placeholder="Email address…"
+                                               type="email">
                                     </div>
                                     <button class="btn btn-default btn-full" type="submit">Sign Up</button>
                                 </form>
-                                <span class="newsletter-privacy text-center mt-3">By signing up, you agree to our <a href="#">Privacy Policy</a></span>
+                                <span class="newsletter-privacy text-center mt-3">By signing up, you agree to our <a
+                                        href="#">Privacy Policy</a></span>
                             </div>
                         </div>
-
-
 
 
                         <!-- widget tags -->
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title">Tag Clouds</h3>
-                                <img src="images/wave.svg" class="wave" alt="wave" />
+                                <img src="images/wave.svg" class="wave" alt="wave"/>
                             </div>
                             <div class="widget-content">
                                 <a href="#" class="tag">#Trending</a>
@@ -146,24 +147,10 @@
                     </div>
 
                 </div>
-
             </div>
-
         </div>
     </section>
-
-
+    @else
+        <p>No Post</p>
+    @endif
 </x-layout>
-
-{{--    <article>--}}
-{{--@foreach($posts as $post)--}}
-{{--    <h1>--}}
-{{--        <a href="posts/{{$post->slug}}">--}}
-{{--            {{$post->title}}--}}
-{{--        </a>--}}
-{{--    </h1>--}}
-{{--        <p>by <a href="/authors/{{$post->author->username}}">{{$post->author->name}}</a> in <a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a></p>--}}
-{{--            <div><p>{{$post->excerpt}}</p></div>--}}
-{{--@endforeach--}}
-{{--    </article>--}}
-

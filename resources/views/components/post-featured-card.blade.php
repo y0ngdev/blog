@@ -6,37 +6,23 @@
             <!-- post -->
             <div class="post featured-post-xl">
                 <div class="details clearfix">
-                    <a href="/categories/{{$post->category->slug}}" class="category-badge lg">{{$post->category->name}}</a>
-                    <h4 class="post-title"><a href="/posts/{{$post->slug}}">{{$post->title}}</a></h4>
+                    <a href="/categories/{{$post[0]->category->slug}}"
+                       class="category-badge lg">{{$post[0]->category->name}}</a>
+                    <h4 class="post-title"><a href="/posts/{{$post[0]->slug}}">{{$post[0]->title}}</a></h4>
                     <ul class="meta list-inline mb-0">
-                        <li class="list-inline-item"> <a href="/authors/{{$post->author->username}}">{{$post->author->name}}</a></li>
-                        <li class="list-inline-item">29 March 2021</li>
+                        <li class="list-inline-item"><a
+                                href="/authors/{{$post[0]->author->username}}">{{$post[0]->author->name}}</a></li>
+                        <li class="list-inline-item">{{($post[0]->created_at->diffForHumans())}}</li>
                     </ul>
                 </div>
-                <a href="/posts/{{$post->slug}}">
+                <a href="/posts/{{$post[0]->slug}}">
                     <div class="thumb rounded">
+                        {{--TODO--}}
                         <div class="inner data-bg-image" data-bg-image="images/posts/featured-xl-1.jpg"></div>
                     </div>
                 </a>
             </div>
-            <!-- post -->
-            <div class="post featured-post-xl">
-                <div class="details clearfix">
-                    <a href="category.html" class="category-badge lg">Culture</a>
-                    <h4 class="post-title"><a href="blog-single.html">Important Thing You Need To Know About Swim</a>
-                    </h4>
-                    <ul class="meta list-inline mb-0">
-                        <li class="list-inline-item"><a href="#">Katen Doe</a></li>
-                        <li class="list-inline-item">29 March 2021</li>
-                    </ul>
-                </div>
-                <a href="blog-single.html">
-                    <div class="thumb rounded">
-                        <div class="inner data-bg-image" data-bg-image="images/posts/featured-xl-2.jpg"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
+         </div>
     </div>
 </section>
 

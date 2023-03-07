@@ -8,11 +8,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="build/assets/images/favicon.png">
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="build/assets/css/bootstrap.min.css" type="text/css" media="all">
-    <link rel="stylesheet" href="build/assets/css/all.min.css" type="text/css" media="all">
-    <link rel="stylesheet" href="build/assets/css/slick.css" type="text/css" media="all">
-    <link rel="stylesheet" href="build/assets/css/simple-line-icons.css" type="text/css" media="all">
-    <link rel="stylesheet" href="build/assets/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/build/assets/css/bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/build/assets/css/all.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/build/assets/css/slick.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/build/assets/css/simple-line-icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/build/assets/css/style.css" type="text/css" media="all">
 
     @vite([''])
 </head>
@@ -80,12 +80,13 @@
 
 
 <!-- JAVA SCRIPTS -->
-<script src="build/assets/js/jquery.min.js"></script>
-<script src="build/assets/js/popper.min.js"></script>
-<script src="build/assets/js/bootstrap.min.js"></script>
-<script src="build/assets/js/slick.min.js"></script>
+<script src="/build/assets/js/jquery.min.js"></script>
+<script src="/build/assets/js/jquery.sticky-sidebar.min.js"></script>
+<script src="/build/assets/js/popper.min.js"></script>
+<script src="/build/assets/js/bootstrap.min.js"></script>
+<script src="/build/assets/js/slick.min.js"></script>
 
-<script src="build/assets/js/custom.js"></script>
+<script src="/build/assets/js/custom.js"></script>
 
 </body>
 </html>
