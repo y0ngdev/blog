@@ -151,6 +151,6 @@
         </div>
     </section>
     @else
-        <p>No Post</p>
+        <h5 class="text-lg-center">No Post. Check back later</h5>
     @endif
 </x-layout>

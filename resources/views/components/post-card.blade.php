@@ -1,4 +1,4 @@
-<!-- post -->
+@props(['$post'])<!-- post -->
 <div class="post post-classic rounded bordered">
     <div class="thumb top-rounded">
         <a href="/categories/{{$post->category->slug}}"
