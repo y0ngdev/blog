@@ -27,14 +27,8 @@
                         <!-- menus -->
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown ">
-                                <a class="nav-link dropdown-toggle" href="index.html">Home</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="index.html">Magazine</a></li>
-                                    <li><a class="dropdown-item" href="personal.html">Personal</a></li>
-                                    <li><a class="dropdown-item" href="personal-alt.html">Personal Alt</a></li>
-                                    <li><a class="dropdown-item" href="minimal.html">Minimal</a></li>
-                                    <li><a class="dropdown-item" href="classic.html">Classic</a></li>
-                                </ul>
+                                <a class="nav-link " href="/">Home</a>
+
                             </li>
 
                         </ul>
