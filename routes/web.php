@@ -16,7 +16,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn() => view('posts', ['posts' => Post::latest('published_at')->get()]));
+Route::get('/', function () {
+    $posts = Post::latest('published_at');
+
+    if (request('query')){
+        $posts->where('title','like','%'.request('query').'%')
+            ->orWhere('body','like','%'.request('query').'%');
+    }
+
+    return view('posts', ['posts' =>
+        $posts->get()
+    ]);
+});
 
 Route::get('posts/{post:slug}', fn(Post $post) => view('post', ['post' => $post]));
 

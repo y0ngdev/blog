@@ -35,7 +35,7 @@
                 <div class="row d-flex align-items-center gy-4">
                     <!-- copyright text -->
                     <div class="col-md-4">
-                        <span class="copyright">© My Blog.</span>
+                        <span class="copyright">©{{now()->year}} My Blog.</span>
                     </div>
 
                     <div class="col-md-4 text-center"></div>
@@ -62,7 +62,7 @@
         </div>
         <!-- form -->
         <form class="d-flex search-form">
-            <input class="form-control me-2" type="search" placeholder="Search and press enter ..." aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Search and press enter ..." value="{{request('query')}}" name="query" aria-label="Search">
             <button class="btn btn-default btn-lg" type="submit"><i class="icon-magnifier"></i></button>
         </form>
     </div>
