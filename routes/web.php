@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
@@ -16,18 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $posts = Post::latest('published_at');
-
-    if (request('query')){
-        $posts->where('title','like','%'.request('query').'%')
-            ->orWhere('body','like','%'.request('query').'%');
-    }
-
-    return view('posts', ['posts' =>
-        $posts->get()
-    ]);
-});
+Route::get('/', [PostController::class,'index'])->name('home');
 
 Route::get('posts/{post:slug}', fn(Post $post) => view('post', ['post' => $post]));
 
