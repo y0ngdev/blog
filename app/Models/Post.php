@@ -20,7 +20,10 @@ class Post extends Model
             ->orWhere('body', 'like', '%' . $query . '%')
         );
         $queries->when($filters['category'] ?? false, fn($queries, $category) => $queries
-            ->where('title', 'like', '%' . $query . '%')
+            ->whereExists(
+                fn($queries)=>$queries->from('categories')
+            )
+            ->where('categories.id', 'like', 'posts.category_id')
             ->orWhere('body', 'like', '%' . $query . '%')
         );
 
