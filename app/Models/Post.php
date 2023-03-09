@@ -19,7 +19,7 @@ class Post extends Model
 
             fn($queries, $query) => $queries
                 ->where('title', 'like', '%' . $query . '%')
-                ->orWhere('body', 'like', '%' . $query . '%');
+                ->orWhere('body', 'like', '%' . $query . '%')
     );
 
     }
