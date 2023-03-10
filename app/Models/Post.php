@@ -21,10 +21,11 @@ class Post extends Model
         );
         $queries->when($filters['category'] ?? false, fn($queries, $category) => $queries
             ->whereExists(
-                fn($queries)=>$queries->from('categories')
+                fn($queries) => $queries->from('categories')
+                    ->whereColumn('categories.id', 'posts.category_id')
+                    ->where('categories.slug', $category)
             )
-            ->where('categories.id', 'like', 'posts.category_id')
-            ->orWhere('body', 'like', '%' . $query . '%')
+
         );
 
     }
