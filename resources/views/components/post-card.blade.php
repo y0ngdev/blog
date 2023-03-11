@@ -17,7 +17,7 @@
         <ul class="meta list-inline mb-0">
             <li class="list-inline-item"><a href="/authors/{{$post->author->username}}"><img
                         src="build/assets/images/other/author-sm.png" class="author"
-                        alt="author"/>{{$post->author->name}}</a></li>
+                        alt="authors"/>{{$post->author->name}}</a></li>
             <li class="list-inline-item">{{($post->created_at->diffForHumans())}}</li>
             <li class="list-inline-item"><i class="icon-bubble"></i> (0)</li>
         </ul>

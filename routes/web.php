@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PostController::class,'index'])->name('home');
-Route::get('posts/{post:slug}', fn(Post $post) => view('post.post', ['post' => $post]));
+Route::get('posts/{post:slug}', [PostController::class,'show']);
 
 Route::get('categories/{category:slug}', fn(Category $category) => view('post.posts', ['posts' => $category->posts]))->name('category');
 

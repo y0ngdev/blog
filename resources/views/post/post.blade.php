@@ -19,7 +19,7 @@
                         <div class="post-header">
                             <h1 class="title mt-0 mb-3">{{$post->title}}</h1>
                             <ul class="meta list-inline mb-0">
-                                <li class="list-inline-item"><a href="/author/{{$post->author->username}}"><img
+                                <li class="list-inline-item"><a href="/authors/{{$post->author->username}}"><img
                                             src="/build/assets/images/other/author-sm.png"
                                             class="author" alt="{{$post->author->name}}"/>{{$post->author->name}}
                                     </a></li>

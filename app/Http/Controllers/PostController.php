@@ -13,4 +13,9 @@ class PostController extends Controller
             'posts' => Post::latest('published_at')->filter(request(['query', 'category']))->get()
         ]);
     }
+
+    public function show(Post $post)
+    {
+        return view('post.post', ['post' => $post]);
+    }
 }
