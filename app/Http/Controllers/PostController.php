@@ -9,7 +9,7 @@ class PostController extends Controller
     public function index()
     {
 
-        return view('posts', [
+        return view('post.posts', [
             'posts' => Post::latest('published_at')->filter(request(['query', 'category']))->get()
         ]);
     }

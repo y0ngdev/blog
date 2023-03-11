@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PostController::class,'index'])->name('home');
-Route::get('posts/{post:slug}', fn(Post $post) => view('post', ['post' => $post]));
+Route::get('posts/{post:slug}', fn(Post $post) => view('post.post', ['post' => $post]));
 
-Route::get('categories/{category:slug}', fn(Category $category) => view('posts', ['posts' => $category->posts]))->name('category');
+Route::get('categories/{category:slug}', fn(Category $category) => view('post.posts', ['posts' => $category->posts]))->name('category');
 
-Route::get('authors/{author:username}', fn(User $author) => view('posts', ['posts' => $author->posts]));
+Route::get('authors/{author:username}', fn(User $author) => view('post.posts', ['posts' => $author->posts]));

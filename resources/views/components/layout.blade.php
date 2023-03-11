@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/build/assets/css/simple-line-icons.css" type="text/css" media="all">
     <link rel="stylesheet" href="/build/assets/css/style.css" type="text/css" media="all">
 
-{{--    @vite([''])--}}
+    {{--    @vite([''])--}}
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 
     <div class="main-overlay"></div>
 
-    @include('partials/_post-header')
+    @include('partials.header')
 
     {{$slot}}
 
@@ -62,7 +62,8 @@
         </div>
         <!-- form -->
         <form class="d-flex search-form">
-            <input class="form-control me-2" type="search" placeholder="Search and press enter ..." value="{{request('query')}}" name="query" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Search and press enter ..."
+                   value="{{request('query')}}" name="query" aria-label="Search">
             <button class="btn btn-default btn-lg" type="submit"><i class="icon-magnifier"></i></button>
         </form>
     </div>
