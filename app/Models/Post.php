@@ -15,10 +15,11 @@ class Post extends Model
 
     public function scopeFilter(Builder $queries, array $filters)
     {
-        $queries->when($filters['query'] ?? false, fn($queries, $query) => $queries
-            ->where('title', 'like', '%' . $query . '%')
+        $queries->when($filters['query'] ?? false, fn($queries, $query) =>
+        $queries ->where(fn($queries)=>
+          $queries  ->where('title', 'like', '%' . $query . '%')
             ->orWhere('body', 'like', '%' . $query . '%')
-        );
+        )  );
         $queries->when($filters['category'] ?? false, fn($queries, $category) => $queries
             ->whereExists(
                 fn($queries) => $queries->from('categories')
