@@ -16,7 +16,8 @@ class Post extends Model
     public function scopeFilter(Builder $queries, array $filters)
     {
         $queries->when($filters['query'] ?? false, fn($queries, $query) =>
-        $queries ->where(fn($queries)=>
+        $queries ->where(
+            fn($queries)=>
           $queries  ->where('title', 'like', '%' . $query . '%')
             ->orWhere('body', 'like', '%' . $query . '%')
         )  );
