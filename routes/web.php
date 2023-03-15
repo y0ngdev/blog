@@ -20,6 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PostController::class,'index'])->name('home');
 Route::get('posts/{post:slug}', [PostController::class,'show']);
 
-Route::get('categories/{category:slug}', fn(Category $category) => view('post.posts', ['posts' => $category->posts]))->name('category');
+Route::get('categorie/{category:slug}', fn(Category $category) => view('post.posts', ['posts' => $category->posts]))->name('category');
 
 Route::get('authors/{author:username}', fn(User $author) => view('post.posts', ['posts' => $author->posts]));
