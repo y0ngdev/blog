@@ -20,3 +20,4 @@ class DatabaseSeeder extends Seeder
         Post::factory(6)->create(['user_id'=>$user->id]);
     }
 }
+

@@ -11,7 +11,7 @@
                     <x-post-card :post="$post"/>
                     @endforeach
 
-                    {{$posts->links()}}
+{{--                    {{$posts->links()}}--}}
                 </div>
             <x-sidebar/>
             </div>
