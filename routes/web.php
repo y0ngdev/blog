@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegisterController;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,4 @@ Route::get('categories/{category:slug}', fn(Category $category) => view('post.po
 
 Route::get('authors/{author:username}', fn(User $author) => view('post.posts', ['posts' => $author->posts]));
 Route::get("register", [RegisterController::class, 'create']);
+ 
