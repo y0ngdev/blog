@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
-|
+|aaaaaaaaaaaaaaaaaaaaaaaaa
 */
 
 Route::get('/', [PostController::class,'index'])->name('home');
@@ -24,4 +24,4 @@ Route::get('categories/{category:slug}', fn(Category $category) => view('post.po
 
 Route::get('authors/{author:username}', fn(User $author) => view('post.posts', ['posts' => $author->posts]));
 Route::get("register", [RegisterController::class, 'create']);
- 
+

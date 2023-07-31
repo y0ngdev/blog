@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/build/assets/css/simple-line-icons.css" type="text/css" media="all">
     <link rel="stylesheet" href="/build/assets/css/style.css" type="text/css" media="all">
 
-    {{--    @vite([''])--}}
 </head>
 
 <body>
@@ -46,6 +45,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </footer>
 
